@@ -1,0 +1,9 @@
+[build]
+  command = "rails build"
+  publish = "public"
+
+[[plugins]]
+  package = "@netlify/plugin-rails"
+
+[context.production.environment]
+  PG_HEADER_DIR = "/usr/include/postgresql"
