@@ -6,4 +6,9 @@
   package = "@netlify/plugin-rails"
 
 [context.production.environment]
-  PG_HEADER_DIR = "/usr/include/postgresql"
+  PG_HEADER_DIR = "/usr/include/postgresql/12"  # Update version number
+  PG_LIB_DIR = "/usr/lib/postgresql/12/lib"  # Update version number
+
+[context.development.environment]
+  PG_HEADER_DIR = "/path/to/development/postgresql/headers"  # Update with the correct path
+  PG_LIB_DIR = "/path/to/development/postgresql/libs"  # Update with the correct path
